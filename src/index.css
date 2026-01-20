@@ -1,0 +1,902 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MiFuente';
+  src: url('/fonts/ArsenicaTrial-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* Dorados */
+  --gold-primary: #a87b05;
+  --gold-light: #efb810;
+  --gold-soft: #f9db5c;
+
+  /* Cremas */
+  --cream-bg: #ffff94;
+  --cream-soft: #fff9e0;
+
+  /* Cafés */
+  --brown-dark: #664300;
+  --brown-soft: #5a4a2f;
+  --brown-light: #8d5a2b;
+
+  /* Blancos */
+  --white-pure: #ffffff;
+  --white-glass: rgba(255, 255, 255, 0.85);
+
+  /* Sombras */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-strong: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* HEADER GENERAL */
+
+.main-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffff94;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  
+}
+
+.main-header,
+.header-image-container,
+.header-content {
+  transition: all 0.5s ease-in-out;
+}
+
+/* ===== ESTADO INICIAL ===== */
+.header-big {
+  height: 100vh;
+}
+
+/* Imagen ocupa 70% */
+.header-image-container {
+  height: 70vh;
+  width: 100%;
+}
+
+.header-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto ocupa 30% */
+.header-content {
+  height: 30vh;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  border-top: 2px solid #efb810;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  color: #a87b05;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  color: #664300;
+}
+
+/* ===== ESTADO SCROLL ===== */
+.header-small {
+  height: auto;
+  padding: 0.8rem 1rem;
+}
+
+.header-small .header-content {
+  height: auto;
+  border-top: none;
+}
+
+.header-small h1 {
+  font-size: 1.4rem;
+  color: #664300;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffff94;
+  overflow: hidden;
+}
+
+/* Imagen */
+.header-image-container {
+  width: 100%;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+
+.header-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto */
+.header-content {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top: 2px solid #efb810;
+  transition: all 0.4s ease;
+}
+
+.header-content h1 {
+  font-size: 2.3rem;
+  color: #a87b05;
+  transition: font-size 0.4s ease;
+}
+
+.header-content p {
+  font-size: 1.1rem;
+  color: #664300;
+}
+
+/* Wrapper general */
+.hero-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen ocupa 70% */
+.hero-image {
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Header ocupa 30% */
+.hero-header {
+  height: 10vh;
+  background: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 2px solid #d49a6a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Header fijo DESPUÉS de salir del hero */
+body {
+  scroll-behavior: smooth;
+}
+
+/* HERO */
+.hero {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HEADER STICKY REAL */
+.main-header {
+
+  
+  height: 20vh;
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 2px solid #d49a6a;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  background-image: url('/banner.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Body */
+body {
+  background-image: url("/Fondo.jpg");
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center top;
+  background-color: #ffff94; /* relleno elegante */
+}
+
+
+
+/* Secciones */
+.section {
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+.invitacion-evento img {
+  width: 45%;
+  height: 45%;
+  
+}
+/* Invitacion Evento Section */
+.date {
+  font-family: "allura", cursive;
+  font-size: 1.75rem;
+  color: var(--gold-primary);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.invitacion-evento {
+  margin: 1.5rem 0;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  margin: 3rem auto;
+  padding: 1.8rem;
+  max-width: 450px;
+  border-radius: 20px;
+}
+
+/* Dress Code Section */
+
+.dresscode{
+  text-align: center;
+  margin: 3rem auto;
+  padding: 1.8rem;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.dresscode-type{
+  font-family: 'allura', bold;
+  font-size: 5rem;
+  color: #daa718;
+}
+.dresscode-colors-title {
+  font-family: 'allura', bold;
+  font-size: 3rem;
+  color: #daa718;
+}
+
+/* IMÁGENES */
+.dresscode-images {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dresscode-images img {
+  width: 120px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.dresscode-colors-title {
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+
+.color-palette {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 1rem;
+  
+}
+
+
+.color-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.color-tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #333;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: opacity 0.25s ease;
+}
+
+
+.color-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+
+.color-box:hover .color-tooltip {
+  opacity: 1;
+}
+
+.location-p {
+  font-family: "MiFuente";
+  font-size: 1.25rem;
+  color: var(--gold-light)
+}
+
+/* Album principal */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.album-card {
+  background-color: #fff9e0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.album-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.album-card h3 {
+  margin: 0.5rem 0 0.2rem 0;
+  color: #664300;
+}
+
+.album-card p {
+  font-size: 0.9rem;
+  color: #a87b05;
+  margin-bottom: 0.5rem;
+}
+
+/* Album Section */
+.album-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.album-item {
+  background-color: #fff9e0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.album-item:hover {
+  transform: scale(1.03);
+}
+
+.album-item img, .album-item video {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+/* CAROUSEL SECTION */
+
+.carousel-container {
+  width: 100%;
+  max-width: 380px;
+  margin: 5rem auto;
+  text-align: center;
+  position: relative;
+}
+
+/* IMAGEN */
+.carousel-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* DOTS */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: -14px;
+}
+
+/* DOT NORMAL */
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #a87b05;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* DOT ACTIVO */
+.dot.active {
+  width: 16px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #efb810;
+  opacity: 1;
+}
+
+/* DRESS CODE SECTION */
+
+/* LOCATION SECTION */
+
+.location-section {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 500px;
+  padding: 1rem;
+}
+
+.location-image {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 14px;
+  margin: 1rem auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.map-container {
+  margin: 1.5rem 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+}
+
+.map-button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 30px;
+  background: #efb810;
+  color: #664300;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.location-card {
+  margin: 3rem auto;
+  padding: 1.5rem;
+  max-width: 520px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* GIFT SECTION */
+
+.gift-section {
+  text-align: center;
+  margin: 3rem auto;
+  padding: 1.8rem;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.gift-text {
+  font-family: "MiFuente",cursive;
+  font-size: 1rem;
+  color: var(--gold-primary);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.gift-option {
+  display:block;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #ffff94;
+  border-radius: 30px;
+}
+
+.gift-option img {
+  width: 100px;        /* tamaño ideal */
+  height: auto;
+  object-fit: contain;
+}
+
+.gift-option span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #664300;
+}
+.gift-option.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.gift-option.vertical img {
+  width: 250px;       /* elegante */
+  margin-bottom: 0.4rem;
+}
+
+.gift-option.vertical span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #664300;
+}
+
+
+/* ALBUM SECTION */
+.special-moments {
+  font-family: "MiFuente",bold;
+  font-size: 1.5rem;
+  color: var(--gold-primary);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+.album-button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 1rem 1.4rem;
+ background: #f9db5c;       /* color principal */
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-button img {
+  width: 200px;
+  margin-bottom: 0.4rem;
+}
+
+.album-button span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #664300;
+}
+
+.album-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.2);
+}
+/* MESSAGES SECTION */
+.guest-messages-section {
+  margin: 4rem auto;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  text-align: center;
+}
+
+.guest-messages-section h2 {
+  color: #664300;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.messages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+}
+
+.message-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 22px;
+  padding: 1.6rem 1.4rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+.message-card::before {
+  content: "“";
+  font-size: 4rem;
+  color: #efb810;
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  opacity: 0.4;
+}
+
+.message-text {
+  font-family: "allura", cursive;
+  font-size: 1.75rem;
+  color: var(--gold-primary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.message-name {
+  font-family: "MiFuente", bold;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #664300;
+  text-align: right;
+}
+
+/* RSVP FORMULARIO */
+
+
+.rsvp-section {
+  max-width: 480px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 22px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.4rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  color: var(--gold-primary);
+}
+
+.form-group textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+.sel-rsvp {
+  font-family: "allura", bold;
+  font-size: 2rem;
+  color: var(--gold-primary);
+}
+.dropdown {
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  list-style: none;
+  padding: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  background: white;
+  color: var(--gold-primary);
+}
+
+.dropdown li {
+  padding: 0.6rem;
+  cursor: pointer;
+}
+
+.dropdown li:hover {
+  background: #f9db5c;
+}
+
+/* FOOTER SECTION  */
+.link-btn {
+  background: none;
+  border: none;
+  color: #a87b05;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: #efb810;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #664300;
+  cursor: pointer;
+}
+.footer-contact {
+  background: linear-gradient(135deg, #f6e6d7, #f2d3b3);
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #5a3e2b;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #6d4c41;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #25d366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.footer-email {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #6d4c41;
+}
+
+.footer-email a {
+  color: #8d5a2b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-email a:hover {
+  text-decoration: underline;
+  color: #ffff94;
+}
+
+.footer-copy {
+  display: block;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: #8d6e63;
+}
+
+.xv{
+  color: #b98f22;
+  font-family: 'MiFuente',bold;
+  font-size: 6rem;
+}
+
+.bella{
+  margin-top: -1.5rem;
+  font-family: 'allura', cursive;
+  font-size: 3rem;
+  color: #daa718;
+}
+
+h2 {
+  color: var(--gold-soft);
+  font-family: "miFuente", bold;
+  font-size: 2rem;
+}
+h1 {
+  color: var(--gold-primary);
+  font-family: "miFuente", bold;
+  font-size: 3rem;
+}
+
+h3 {
+  color: var(--gold-primary);
+  font-family: "allura", bold;
+  font-size: 2rem;
+}
+h4 {
+  color: var(--gold-primary);
+  font-family: "allura", bold;
+  font-size: 3rem;
+}
+
+.countdown {
+  color: var(--gold-primary);
+  font-family: "miFuente", bold;
+  font-size: 1.25rem;
+}

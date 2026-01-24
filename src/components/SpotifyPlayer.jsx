@@ -1,50 +1,48 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 function SpotifyPlayer() {
   const audioRef = useRef(null)
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true)
 
-  const togglePlay = () => {
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.muted = true   // 🔇 empieza en silencio
+      audioRef.current.play().catch(() => {})
+    }
+  }, [])
+
+  const togglePlay = async () => {
     if (!audioRef.current) return
 
-    if (isPlaying) {
+    if (audioRef.current.paused) {
+      audioRef.current.muted = false // 🔊 sonido solo al click
+      await audioRef.current.play()
+      setIsPlaying(true)
+    } else {
       audioRef.current.pause()
       setIsPlaying(false)
-    } else {
-      audioRef.current.play()
-      setIsPlaying(true)
     }
   }
 
   return (
     <>
-      {/* Audio invisible */}
-      <audio ref={audioRef} src="/assets/music/cancion.mp3" />
+      <audio
+        ref={audioRef}
+        src="/cancion.mp3"
+        autoPlay
+        loop
+        preload="auto"
+      />
 
-      {/* Botón flotante */}
       <button
         onClick={togglePlay}
-        style={{
-           position: 'fixed',
-            bottom: '20px',
-            left: '20px',
-            width: '50px',
-            height: '50px',
-            borderRadius: '50%',
-            border: 'none',
-            background: '#d49a6a',
-            color: '#fff',
-            fontSize: '1.5rem',
-            cursor: 'pointer',
-            boxShadow: '0 2px 6px rgba(0,0,0,0.3)',
-            display: 'flex',           // 🔹 flex
-            justifyContent: 'center',  // 🔹 centrar horizontal
-            alignItems: 'center',      // 🔹 centrar vertical
-            zIndex: 1000
-        }}
+        className='button-play'
         title={isPlaying ? 'Pausar música' : 'Reproducir música'}
       >
-        {isPlaying ? '⏸' : '▶️'}
+        <img
+          src={isPlaying ? '/pause.png' : '/play.png'}
+          alt="control"
+        />
       </button>
     </>
   )

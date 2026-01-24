@@ -17,7 +17,7 @@ import FooterContact from '../components/FooterContact'
 function Invitation() {
   return (
     
-    <div>
+    <div className="body-invitation">
       <Header />
       <PhotoCarousel />
       <InvitacionEvento />

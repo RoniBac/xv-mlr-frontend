@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 function Countdown() {
-  const eventDate = new Date('2026-01-30T18:00:00')
+  const eventDate = new Date('2026-03-07T17:00:00')
   const [timeLeft, setTimeLeft] = useState({})
 
   useEffect(() => {
@@ -19,12 +19,42 @@ function Countdown() {
   }, [])
 
   return (
-    <div style={{ textAlign: 'center', margin: '2rem 0' }}>
-      <h2>Faltan</h2>
-      <h1>{timeLeft.days} : {timeLeft.hours} : {timeLeft.minutes} :  {timeLeft.seconds}</h1>
-      <p className='countdown'>&emsp;&emsp;Días   &emsp;&emsp;  Horas  &emsp; Minutos &emsp;    Segundos  </p>
+  <div className="countdown">
+    <img src="/reloj.png" alt="reloj" className="countdown-icon" />
+    <p className='countdown-title'>Falta</p>
+
+    <div className="countdown-grid">
+
+      <div className="time-block">
+        <span className="number">{timeLeft.days}</span>
+        <span className="label">Días</span>
+      </div>
+
+      <span className="colon">:</span>
+
+      <div className="time-block">
+        <span className="number">{timeLeft.hours}</span>
+        <span className="label">Horas</span>
+      </div>
+
+      <span className="colon">:</span>
+
+      <div className="time-block">
+        <span className="number">{timeLeft.minutes}</span>
+        <span className="label">Minutos</span>
+      </div>
+
+      <span className="colon">:</span>
+
+      <div className="time-block">
+        <span className="number">{timeLeft.seconds}</span>
+        <span className="label">Segundos</span>
+      </div>
+
     </div>
-  )
+  </div>
+)
+
 }
 
 export default Countdown

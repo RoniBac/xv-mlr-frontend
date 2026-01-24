@@ -8,7 +8,8 @@ function GuestMessages() {
 
   return (
     <div className="guest-messages-section">
-      <h4>Mensajes de invitados</h4>
+      <img src="/chatting.png" alt="reloj" className="guest-messages-img" />
+      <p className="guest-messages-title">Mensajes de invitados</p>
       <div className="messages-container">
         {messages.map((m, i) => (
           <div key={i} className="message-card">

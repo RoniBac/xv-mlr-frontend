@@ -20,6 +20,7 @@ function PhotoCarousel() {
   })
 
   return (
+    <div className='carousel-bg'>
     <div className="carousel-container" {...handlers}>
       <img
         src={images[index]}
@@ -36,6 +37,7 @@ function PhotoCarousel() {
           />
         ))}
       </div>
+    </div>
     </div>
   )
 }

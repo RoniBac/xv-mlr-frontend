@@ -12,45 +12,39 @@
   font-style: normal;
 }
 
+@media (max-width: 480px) {
+  .number {
+    font-size: 1.8rem;
+  }
+
+  .colon {
+    font-size: 1.6rem;
+  }
+
+  .label {
+    font-size: 0.65rem;
+  }
+}
+
+
 :root {
   /* Dorados */
-  --gold-primary: #a87b05;
-  --gold-light: #efb810;
-  --gold-soft: #f9db5c;
+  --gold-primary: #795300;
+  --gold-light: #b28405;
+  --gold-soft: #efb810;
+  --gold-softer: #f6d87c;
+  --gold-softest: #ffff94;
 
-  /* Cremas */
-  --cream-bg: #ffff94;
-  --cream-soft: #fff9e0;
-
-  /* Cafés */
-  --brown-dark: #664300;
-  --brown-soft: #5a4a2f;
-  --brown-light: #8d5a2b;
-
-  /* Blancos */
-  --white-pure: #ffffff;
-  --white-glass: rgba(255, 255, 255, 0.85);
-
-  /* Sombras */
-  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.15);
-  --shadow-strong: 0 15px 30px rgba(0, 0, 0, 0.2);
+  /* tamaño Fuentes */
+  --title-font-size: 4rem;
+  --text-font-size: 1.75rem;
+  --subtitle-font-size: 2.5rem;
+  --subtext-font-size: 1.25rem;
 }
 
 
 
 /* HEADER GENERAL */
-
-.main-header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #ffff94;
-  transition: all 0.4s ease;
-  overflow: hidden;
-  
-}
 
 .main-header,
 .header-image-container,
@@ -58,140 +52,12 @@
   transition: all 0.5s ease-in-out;
 }
 
-/* ===== ESTADO INICIAL ===== */
-.header-big {
-  height: 100vh;
-}
 
-/* Imagen ocupa 70% */
-.header-image-container {
-  height: 70vh;
-  width: 100%;
-}
 
-.header-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Texto ocupa 30% */
-.header-content {
-  height: 30vh;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  border-top: 2px solid #efb810;
-}
-
-.header-content h1 {
-  font-size: 2.5rem;
-  color: #a87b05;
-}
-
-.header-content p {
-  font-size: 1.2rem;
-  color: #664300;
-}
 
 /* ===== ESTADO SCROLL ===== */
-.header-small {
-  height: auto;
-  padding: 0.8rem 1rem;
-}
 
-.header-small .header-content {
-  height: auto;
-  border-top: none;
-}
 
-.header-small h1 {
-  font-size: 1.4rem;
-  color: #664300;
-}
-
-.main-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #ffff94;
-  overflow: hidden;
-}
-
-/* Imagen */
-.header-image-container {
-  width: 100%;
-  transition: height 0.4s ease, opacity 0.4s ease;
-}
-
-.header-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Texto */
-.header-content {
-  min-height: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-top: 2px solid #efb810;
-  transition: all 0.4s ease;
-}
-
-.header-content h1 {
-  font-size: 2.3rem;
-  color: #a87b05;
-  transition: font-size 0.4s ease;
-}
-
-.header-content p {
-  font-size: 1.1rem;
-  color: #664300;
-}
-
-/* Wrapper general */
-.hero-wrapper {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Imagen ocupa 70% */
-.hero-image {
-  height: 90vh;
-  overflow: hidden;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Header ocupa 30% */
-.hero-header {
-  height: 10vh;
-  background: white;
-  text-align: center;
-  padding: 1.5rem;
-  border-bottom: 2px solid #d49a6a;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-   position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-/* Header fijo DESPUÉS de salir del hero */
 body {
   scroll-behavior: smooth;
 }
@@ -215,7 +81,7 @@ body {
   height: 20vh;
   text-align: center;
   padding: 1.5rem;
-  border-bottom: 2px solid #d49a6a;
+  border-bottom: 2px solid var(--gold-light);
 
   position: sticky;
   top: 0;
@@ -233,14 +99,97 @@ body {
 
 
 /* Body */
-body {
+.body-invitation {
   background-image: url("/Fondo.jpg");
   background-size: contain;
   background-repeat: repeat;
   background-position: center top;
-  background-color: #ffff94; /* relleno elegante */
+}
+.body-album {
+  background-image: url("/Fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  align-items: center;
+  text-align: center;
+}
+.invitacion-prevista {
+  background-image: url("/fondo_sec.png");
+  background-size: 26.5rem 102%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
+.invitacion-prevista img {
+  margin: 2rem auto;
+  width: 23rem;
+  height: 30rem;
+}
+
+.countdown{
+  background-image: url("/fondo_sec.png");
+  background-size: 26.5rem 102%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin: 2rem 0 ;
+  padding: 2rem;
+
+}
+.countdown-title {
+  font-family: "allura", cursive;
+  font-size: var(--title-font-size);
+  color: var(--gold-light);
+  margin-top: 1rem;
+}
+
+.countdown-icon {
+  width: 90px;
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 55px;
+}
+.number {
+  font-family: "MiFuente";
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--gold-primary);
+  line-height: 1;
+}
+.label {
+  font-family: "MiFuente",bold;
+  font-size: 1.2rem;
+  color: var(--gold-primary);
+  margin-bottom: 2rem;
+}
+.colon {
+  font-size: 2rem;
+  color: var(--gold-primary);
+  margin-bottom: 3rem;
+}
+
+.countdownhour{
+  margin-left: 1.5rem;
+  font-family: "MiFuente",bold;
+  font-size: 1.25rem;
+  color: var(--gold-primary);
+}
 
 
 /* Secciones */
@@ -249,18 +198,20 @@ body {
   text-align: center;
   padding: 2rem;
   margin: 2rem 0;
+  background-image: url("/fondo_sec.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+
 }
-.invitacion-evento img {
-  width: 45%;
-  height: 45%;
-  
-}
+
 /* Invitacion Evento Section */
 .date {
+  margin: 2rem;
   font-family: "allura", cursive;
-  font-size: 1.75rem;
+  font-size: var(--text-font-size);
   color: var(--gold-primary);
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -275,22 +226,25 @@ body {
   border-radius: 20px;
 }
 
+
 /* Dress Code Section */
 
 .dresscode{
   text-align: center;
-  margin: 3rem auto;
-  padding: 1.8rem;
-  max-width: 480px;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 20px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  justify-content: center;
+  padding: 2rem;
+  margin: 2rem;
+  background-image: url("/fondo_sec.png");
+  background-size: 26.5rem 102%;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .dresscode-type{
+  margin-top: 2rem;
   font-family: 'allura', bold;
-  font-size: 5rem;
-  color: #daa718;
+  font-size: 6rem;
+  color: var(--gold-light);
 }
 .dresscode-colors-title {
   font-family: 'allura', bold;
@@ -307,9 +261,8 @@ body {
 }
 
 .dresscode-images img {
-  width: 120px;
+  width: 300px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 
@@ -372,28 +325,27 @@ body {
   opacity: 1;
 }
 
-.location-p {
-  font-family: "MiFuente";
-  font-size: 1.25rem;
-  color: var(--gold-light)
-}
+
 
 /* Album principal */
 .album-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: no-repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin:2rem;
 }
 
 .album-card {
-  background-color: #fff9e0;
+  background-image: url("/fondo_sec.png");
+  background-size: 26.5rem 107%;
+  background-repeat: no-repeat;
+  background-position: center top;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .album-card:hover {
@@ -402,22 +354,21 @@ body {
 }
 
 .album-card img {
-  width: 100%;
-  height: 140px;
+  margin-top: 4rem;
+  width: 15rem;
+  height: 15rem;
   object-fit: cover;
+  border-radius: 2rem;
 }
 
-.album-card h3 {
-  margin: 0.5rem 0 0.2rem 0;
-  color: #664300;
-}
 
-.album-card p {
-  font-size: 0.9rem;
-  color: #a87b05;
-  margin-bottom: 0.5rem;
-}
 
+.album-title {
+  font-family: "MiFuente",bold;
+  font-size: var(--subtext-font-size);
+  color: var(--gold-primary);
+  margin-top: 1rem;
+}
 /* Album Section */
 .album-items-grid {
   display: grid;
@@ -427,44 +378,103 @@ body {
 }
 
 .album-item {
-  background-color: #fff9e0;
-  border-radius: 12px;
+  position: relative;
+  background-color: #1a1a1a; /* negro film */
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  width: 16rem;
+  height: 16rem;
+  transition: transform 0.25s ease;
 }
+
+.album-item:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Perforaciones arriba y abajo */
+.album-item::before,
+.album-item::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  height: 14px;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 8px,
+    #000 8px,
+    #000 14px
+  );
+  opacity: 0.85;
+  z-index: 2;
+}
+
+/* Parte superior */
+.album-item::before {
+  top: 4px;
+}
+
+/* Parte inferior */
+.album-item::after {
+  bottom: 4px;
+}
+
+/* Foto / video estilo diapositiva */
+.album-item img,
+.album-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 20px 10px; /* espacio para perforaciones */
+  box-sizing: border-box;
+  border-radius: 4px;
+  z-index: 1;
+  position: relative;
+}
+
 
 .album-item:hover {
   transform: scale(1.03);
 }
 
 .album-item img, .album-item video {
-  width: 100%;
-  height: 140px;
+  margin-top: 1rem;
+  width: 13rem;
+  height: 13rem;
   object-fit: cover;
   border-radius: 8px;
 }
 
 
-
 /* CAROUSEL SECTION */
-
-.carousel-container {
-  width: 100%;
-  max-width: 380px;
-  margin: 5rem auto;
+.carousel-bg{
+  background-image: url("/fondo_sec.png");
+  background-size: 26.5rem 105%;
+  background-repeat: no-repeat;
+  background-position: center top;
   text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+}
+.carousel-container {
+  width: 110%;
+  max-width: 25rem;
+  text-align: center;
+  justify-self: center;
   position: relative;
 }
 
 /* IMAGEN */
 .carousel-image {
-  width: 100%;
-  height: 400px;
+  width: 23rem;
+  height: 450px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+
 }
 
 /* DOTS */
@@ -500,16 +510,17 @@ body {
 
 .location-section {
   text-align: center;
-  margin: 3rem auto;
+  margin: 1rem auto;
   max-width: 500px;
   padding: 1rem;
 }
 
 .location-image {
+  
   width: 100%;
   max-width: 260px;
   border-radius: 14px;
-  margin: 1rem auto;
+  margin-top: 6rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -517,11 +528,10 @@ body {
   margin: 1.5rem 0;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .map-container iframe {
-  width: 100%;
+  width: 23rem;
   height: 250px;
   border: 0;
 }
@@ -531,12 +541,13 @@ body {
   padding: 0.8rem 1.6rem;
   border: none;
   border-radius: 30px;
-  background: #efb810;
-  color: #664300;
-  font-size: 1rem;
+  background: var(--gold-soft);
+  color: var(--gold-primary);
+  font-size: 1.25rem;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 4rem;
 }
 
 .map-button:hover {
@@ -549,38 +560,77 @@ body {
   padding: 1.5rem;
   max-width: 520px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  background-image: url("/fondo_sec.png");
+  background-size: 29rem 105%;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
+.location-title {
+  font-family: "allura", bold;
+  font-size: var(--subtitle-font-size);
+  color: var(--gold-light);
+}
+
+.location-p {
+  font-family: "MiFuente",bold;
+  font-size: var(--subtext-font-size);
+  color: var(--gold-primary)
+}
 /* GIFT SECTION */
 
 .gift-section {
-  text-align: center;
+  border-radius: 14px;
+  overflow: hidden;
   margin: 3rem auto;
-  padding: 1.8rem;
-  max-width: 480px;
-  background: rgba(255, 255, 255, 0.85);
+  max-width: 450px;
   border-radius: 20px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+
+  text-align: center;
+  padding: 1rem;
+  background-image: url("/fondo_sec.png");
+  background-size: 26.5rem 107%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  
+}
+
+.gift-img {
+  width: 100px;
+  margin: 2rem;
+  margin-top: 8rem;
+}
+.gift-title {
+
+  font-family: "allura",cursive;
+  font-size: var(--title-font-size);
+  color: var(--gold-light);
 }
 
 .gift-text {
-  font-family: "MiFuente",cursive;
-  font-size: 1rem;
+  
+  font-family: "MiFuente",bold;
+  font-size: var(--text-font-size);
   color: var(--gold-primary);
   line-height: 1.6;
   margin-bottom: 1.2rem;
+  margin: 2rem;
+  text-align: center;
 }
 
 .gift-option {
   display:block;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
   padding: 0.6rem 1.2rem;
-  background: #ffff94;
   border-radius: 30px;
+}
+
+.gift-sobre {
+  font-family: "MiFuente",bold;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--gold-primary);
 }
 
 .gift-option img {
@@ -592,47 +642,75 @@ body {
 .gift-option span {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #664300;
+  color: var(--gold-primary);
 }
 .gift-option.vertical {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1.2rem;
+  margin-bottom: 3rem;
 }
 
 .gift-option.vertical img {
   width: 250px;       /* elegante */
-  margin-bottom: 0.4rem;
 }
 
 .gift-option.vertical span {
+
   font-size: 1rem;
   font-weight: 600;
-  color: #664300;
+  color: var(--gold-primary);
 }
 
 
 /* ALBUM SECTION */
 .special-moments {
+  justify-self: center;
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+  background-image: url("/fondo_sec.png");
+  background-size: 26.5rem 106%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  text-align: center;
+
   font-family: "MiFuente",bold;
   font-size: 1.5rem;
   color: var(--gold-primary);
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
+
 }
+.special-img {
+  width: 100px;
+  margin: 2rem;
+  margin-top: 4rem;
+
+}
+.special-title {
+  font-family: "allura", cursive;
+  font-size: var(--title-font-size);
+  color: var(--gold-light);
+}
+.special-moments-text {
+
+  font-family: "MiFuente",bold;
+  font-size: var(--text-font-size);
+  color: var(--gold-primary);
+  text-align: center;
+}
+
 .album-button {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   margin-top: 1.5rem;
   padding: 1rem 1.4rem;
- background: #f9db5c;       /* color principal */
   border-radius: 20px;
   cursor: pointer;
   user-select: none;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 2rem;
 }
 
 .album-button img {
@@ -641,47 +719,124 @@ body {
 }
 
 .album-button span {
-  font-size: 1rem;
+  font-family: "MiFuente",bold;
+  font-size: var(--subtext-font-size);
   font-weight: 600;
-  color: #664300;
+  color: var(--gold-light);
 }
 
 .album-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 26px rgba(0, 0, 0, 0.2);
 }
-/* MESSAGES SECTION */
-.guest-messages-section {
-  margin: 4rem auto;
-  padding: 2rem 1rem;
-  max-width: 900px;
-  text-align: center;
+
+h1 {
+  color: var(--gold-light);
+  font-family: "allura", cursive;
+  font-size: var(--title-font-size);
+  align-self: center;
+  margin-top: 2rem;
 }
 
-.guest-messages-section h2 {
-  color: #664300;
+h2 {
+  color: var(--gold-primary);
+  font-family: "allura", cursive;
+  font-size: var(--subtitle-font-size);
+  font-weight: 600;
+}
+
+h3 {
+  color: var(--gold-soft);
+  font-family: "mifuente", bold;
+  font-size: var(--subtext-font-size);
   margin-bottom: 2rem;
-  font-size: 2rem;
+  
+}
+
+/* Miniaturas */
+.album-thumb {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.album-thumb:hover {
+  transform: scale(1.03);
+}
+
+/* Fondo oscuro */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Marco blanco tipo polaroid */
+.lightbox-frame {
+  background: white;
+  padding: 20px 20px 140px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/* Imagen cuadrada */
+.lightbox-frame img {
+  width: 70vmin;
+  height: 70vmin;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* MESSAGES SECTION */
+.guest-messages-section {
+
+
+  justify-self: center;
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+  background-image: url("/fondo_sec.png");
+  background-size: 26.5rem 107%;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.guest-messages-title {
+  font-family: "allura", cursive;
+  font-size: var(--title-font-size);
+  color: var(--gold-primary);
+}
+
+.guest-messages-img {
+  width: 100px;
+  margin: 2rem;
+  margin-top: 10rem;
 }
 
 .messages-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.8rem;
+  margin-bottom: 4rem;
 }
 
 .message-card {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 22px;
-  padding: 1.6rem 1.4rem;
+  margin: 1rem;
+  padding: 1.4rem 1.4rem;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
   position: relative;
 }
 
 .message-card::before {
   content: "“";
-  font-size: 4rem;
-  color: #efb810;
+  font-size: var(--title-font-size);
+  color: var(--gold-soft);
   position: absolute;
   top: -10px;
   left: 16px;
@@ -690,8 +845,8 @@ body {
 
 .message-text {
   font-family: "allura", cursive;
-  font-size: 1.75rem;
-  color: var(--gold-primary);
+  font-size: var(--subtitle-font-size);
+  color: var(--gold-soft);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -699,8 +854,8 @@ body {
 .message-name {
   font-family: "MiFuente", bold;
   font-weight: 600;
-  font-size: 0.95rem;
-  color: #664300;
+  font-size: var(--subtext-font-size);
+  color: var(--gold-primary);
   text-align: right;
 }
 
@@ -708,18 +863,35 @@ body {
 
 
 .rsvp-section {
-  max-width: 480px;
-  margin: 4rem auto;
+  justify-self: center;
+  margin: 2rem;
   padding: 2rem;
-  background: rgba(255,255,255,0.9);
-  border-radius: 22px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
   text-align: center;
+  align-items: center;
+  background-image: url("/fondo_sec.png");
+  background-size: 26.5rem 107%;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
+.rsvp-title {
+  font-family: "allura", cursive;
+  font-size: var(--title-font-size);
+  color: var(--gold-light);
+  margin-bottom: 2rem;
+
+}
+
+.rsvp-img {
+  width: 100px;
+  margin: 2rem;
+  margin-top: 4rem;
+}
 .form-group {
   margin-bottom: 1.4rem;
-  text-align: left;
+  text-align: center;
+  font-family: "MiFuente", bold;
+  
 }
 
 .form-group label {
@@ -727,11 +899,13 @@ body {
   margin-bottom: 0.4rem;
   font-weight: 600;
   color: var(--gold-primary);
+  
 }
 
 .form-group input[type="text"],
 .form-group textarea {
-  width: 100%;
+
+  width: 80%;
   padding: 0.7rem;
   border-radius: 10px;
   border: 1px solid #ccc;
@@ -742,11 +916,16 @@ body {
   resize: none;
   min-height: 80px;
 }
-
-.sel-rsvp {
-  font-family: "allura", bold;
-  font-size: 2rem;
+.info-text {
+  font-family: "MiFuente", bold;
+  font-size: var(--subtext-font-size);
   color: var(--gold-primary);
+  margin-bottom: 1.5rem;
+}
+.sel-rsvp {
+  font-family: "allura", cursive;
+  font-size: var(--subtitle-font-size);
+  color: var(--gold-soft);
 }
 .dropdown {
   margin-top: 0.3rem;
@@ -757,7 +936,7 @@ body {
   max-height: 160px;
   overflow-y: auto;
   background: white;
-  color: var(--gold-primary);
+  color: var(--gold-soft);
 }
 
 .dropdown li {
@@ -766,27 +945,33 @@ body {
 }
 
 .dropdown li:hover {
-  background: #f9db5c;
+  background: var(--gold-softer);
 }
 
 /* FOOTER SECTION  */
 .link-btn {
   background: none;
   border: none;
-  color: #a87b05;
+  color: var(--gold-light);
   cursor: pointer;
   margin-bottom: 1rem;
+  text-decoration: underline;
+}
+.link-btn:hover {
+  text-decoration: underline;
+  color: var(--gold-softest);
 }
 
 .primary-btn {
   width: 100%;
   padding: 0.8rem;
-  background: #efb810;
+  background: var(--gold-soft);
   border: none;
   border-radius: 30px;
   font-weight: 600;
-  color: #664300;
+  color: var(--gold-primary);
   cursor: pointer;
+  margin-bottom: 2rem;
 }
 .footer-contact {
   background: linear-gradient(135deg, #f6e6d7, #f2d3b3);
@@ -873,30 +1058,104 @@ body {
   color: #daa718;
 }
 
-h2 {
-  color: var(--gold-soft);
-  font-family: "miFuente", bold;
-  font-size: 2rem;
-}
-h1 {
-  color: var(--gold-primary);
-  font-family: "miFuente", bold;
-  font-size: 3rem;
-}
 
-h3 {
-  color: var(--gold-primary);
-  font-family: "allura", bold;
-  font-size: 2rem;
-}
-h4 {
-  color: var(--gold-primary);
-  font-family: "allura", bold;
-  font-size: 3rem;
-}
 
 .countdown {
   color: var(--gold-primary);
   font-family: "miFuente", bold;
   font-size: 1.25rem;
 }
+
+.hero {
+  height: 80vh;              /* ⬅️ ocupa toda la pantalla */
+  width: 100%;
+  background-image: url('/hero.jpg'); /* tu imagen */
+  background-size: cover;     /* ⬅️ se adapta a cualquier pantalla */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+.button-play {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background-color: var(--gold-softer);
+  border: 2px solid var(--gold-soft);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.button-play img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+
+/* secret */
+.game-overlay {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.game-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+canvas {
+  display: block;
+  border: 2px solid #000;
+  margin: 1rem 0;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+}
+canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.game-overlay{
+  position: fixed;
+  inset: 0;
+  background-image: url("/bg-cam-s.png");
+  background-size: 100% 107%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-box {
+  width: 100%;
+  max-width: 900px;
+  padding: 1rem;
+}
+

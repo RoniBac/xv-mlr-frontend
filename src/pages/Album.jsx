@@ -5,19 +5,19 @@ const albums = [
     id: 'fotos', 
     title: 'Fotos', 
     description: 'Todas las fotos de la XV', 
-    preview: '/assets/images/album-fotos.jpg' 
+    preview: '/xv.jpeg' 
   },
   { 
     id: 'ceremonia', 
     title: 'Ceremonia', 
     description: 'Fotos de la ceremonia oficial', 
-    preview: '/assets/images/album-ceremonia.jpg' 
+    preview: '/xv2.jpeg' 
   },
   { 
     id: 'evento', 
     title: 'Evento', 
     description: 'Fotos y videos del evento oficial', 
-    preview: '/assets/images/album-evento.jpg' 
+    preview: '/xv3.jpeg' 
   },
   { 
     id: 'momentos', 
@@ -31,7 +31,7 @@ function Album() {
   const navigate = useNavigate()
 
   return (
-    <div className="container">
+    <div className="body-album">
       <h1>Álbum Oficial</h1>
       <div className="album-grid">
         {albums.map(album => (
@@ -40,9 +40,9 @@ function Album() {
             className="album-card"
             onClick={() => navigate(`/album/${album.id}`)}
           >
-            <img src={album.preview} alt={album.title} />
-            <h3>{album.title}</h3>
-            <p>{album.description}</p>
+            <img className="album-prev-img" src={album.preview} alt={album.title} />
+            <h2>{album.title}</h2>
+            <h3>{album.description}</h3>
           </div>
         ))}
       </div>

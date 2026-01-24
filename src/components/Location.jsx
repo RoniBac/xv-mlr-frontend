@@ -16,7 +16,7 @@ function Location() {
           className="location-image"
         />
 
-        <h3>Iglesia Sagrado Corazón de Jesús</h3>
+        <p className="location-title">Iglesia Sagrado Corazón de Jesús</p>
         <p className="location-p">Miguel Hidalgo y Costilla 210, 89910 El Limón, Tamps.</p>
 
         <div className="map-container">
@@ -43,7 +43,7 @@ function Location() {
           className="location-image"
         />
 
-        <h3>Aguilas De La Victoria</h3>
+        <p className="location-title">Aguilas De La Victoria</p>
         <p className="location-p">89753 Xicoténcatl, Tamaulipas</p>
 
         <div className="map-container">

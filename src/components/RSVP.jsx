@@ -46,7 +46,8 @@ function RSVP() {
 
   return (
     <section className="rsvp-section">
-      <h4>Confirmar asistencia</h4>
+      <img src="/formulario.png" alt="reloj" className='rsvp-img'/>
+      <p className='rsvp-title'>Confirmar asistencia</p>
 
       {/* BUSCADOR */}
       {!selected && (
@@ -80,10 +81,10 @@ function RSVP() {
       {/* FORMULARIO */}
       {selected && (
         <div className="rsvp-form">
-          <h2>
+          <p className="info-text">
             Seleccionada:
             <strong className='sel-rsvp'> {selected.last_name}</strong>
-          </h2>
+          </p>
 
           <button className="link-btn" onClick={resetSelection}>
             Cambiar apellido
@@ -123,7 +124,7 @@ function RSVP() {
           )}
 
           <button className="primary-btn" onClick={handleConfirm}>
-            Generar invitación
+            GENERAR
           </button>
         </div>
       )}

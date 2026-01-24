@@ -1,7 +1,8 @@
 function GiftSuggestion() {
   return (
     <section className="gift-section">
-      <h4>Sugerencia de regalo</h4>
+      <img src="/gift.png" alt="reloj" className="gift-img" />
+      <p className="gift-title">Sugerencia de regalo</p>
 
       <p className="gift-text">
         Tu compañía en este día tan especial es el mejor regalo.
@@ -11,7 +12,7 @@ function GiftSuggestion() {
 
       <div className="gift-option vertical">
         <img src="/carta.png" alt="sobre" />
-        <h1>SOBRE</h1>
+        <p className="gift-sobre">SOBRE</p>
       </div>
     </section>
   )

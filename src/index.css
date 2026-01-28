@@ -1170,19 +1170,7 @@ canvas {
 }
 
 
-.app {
-  min-width: 500px;
-  min-height: 636px;
 
-  width: 100%;
-  max-width: 900px; /* aquí decides hasta dónde crece */
-  
-  height: auto;
-  aspect-ratio: 500 / 636;
-
-  background: white;
-  border-radius: 20px;
-}
 
 body {
   margin: 0;
@@ -1193,10 +1181,9 @@ body {
 
 #root{
   min-width: 500px;
-  min-height: 636px;
+  min-height: 100%;
 
   width: 100%;
-  max-width: 900px; /* aquí decides hasta dónde crece */
   
   height: auto;
   aspect-ratio: 500 / 636;

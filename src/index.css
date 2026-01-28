@@ -102,8 +102,8 @@ body {
 /* Body */
 .body-invitation {
   background-image: url("/Fondo.jpg");
-  background-size: contain;
-  background-repeat: repeat;
+  background-size: 100% auto;     /* cubre TODO el ancho */
+  background-repeat: repeat-y;    /* solo se repite hacia abajo */
   background-position: center top;
 }
 .body-album {

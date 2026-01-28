@@ -4,7 +4,7 @@ import Dino from "./Dino";
 import Obstacle from "./Obstacle";
 
 /* ===== CONFIG ===== */
-const GAME_WIDTH = Math.min(window.innerWidth - 20, 800);
+const GAME_WIDTH = Math.min(window.innerWidth - 20, 400);
 const GAME_HEIGHT = Math.min(window.innerHeight * 0.6, 400);
 
 const GROUND_Y = 350;

@@ -41,7 +41,7 @@
   --subtitle-font-size: 2.5rem;
   --subtext-font-size: 1.25rem;
 }
-
+ 
 
 
 /* HEADER GENERAL */
@@ -373,19 +373,24 @@ body {
 .album-items-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 1.5rem;
 }
 
 .album-item {
   position: relative;
-  background-color: #1a1a1a; /* negro film */
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
   width: 16rem;
   height: 16rem;
   transition: transform 0.25s ease;
+   background-image: url("/fondo_sec.png");
+  background-size: 40vh 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  
 }
 
 .album-item:hover {
@@ -400,13 +405,6 @@ body {
   left: 8px;
   right: 8px;
   height: 14px;
-  background: repeating-linear-gradient(
-    to right,
-    transparent 0px,
-    transparent 8px,
-    #000 8px,
-    #000 14px
-  );
   opacity: 0.85;
   z-index: 2;
 }
@@ -1155,7 +1153,61 @@ canvas {
 
 .game-box {
   width: 100%;
-  max-width: 900px;
+  max-width: 300px;
   padding: 1rem;
 }
 
+.app {
+  width: clamp(500px, 90vw, 900px);
+  aspect-ratio: 500 / 636;
+
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .app {
+    width: 95vw;
+    aspect-ratio: 500 / 636;
+    border-radius: 14px;
+  }
+}
+
+.app {
+  min-width: 500px;
+  min-height: 636px;
+
+  width: 100%;
+  max-width: 900px; /* aquí decides hasta dónde crece */
+  
+  height: auto;
+  aspect-ratio: 500 / 636;
+
+  background: white;
+  border-radius: 20px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #f2f2f2;
+}
+
+
+#root{
+  min-width: 500px;
+  min-height: 636px;
+
+  width: 100%;
+  max-width: 900px; /* aquí decides hasta dónde crece */
+  
+  height: auto;
+  aspect-ratio: 500 / 636;
+
+}

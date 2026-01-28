@@ -6,10 +6,11 @@
 }
 
 @font-face {
-  font-family: 'MiFuente';
+  font-family: 'Playfair Display';
   src: url('/fonts/ArsenicaTrial-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @media (max-width: 480px) {
@@ -166,14 +167,14 @@ body {
   min-width: 55px;
 }
 .number {
-  font-family: "MiFuente";
+  font-family: "Playfair Display";
   font-size: 2rem;
   font-weight: bold;
   color: var(--gold-primary);
   line-height: 1;
 }
 .label {
-  font-family: "MiFuente",bold;
+  font-family: "Playfair Display",bold;
   font-size: 1.2rem;
   color: var(--gold-primary);
   margin-bottom: 2rem;
@@ -186,7 +187,7 @@ body {
 
 .countdownhour{
   margin-left: 1.5rem;
-  font-family: "MiFuente",bold;
+  font-family: "Playfair Display",bold;
   font-size: 1.25rem;
   color: var(--gold-primary);
 }
@@ -364,7 +365,7 @@ body {
 
 
 .album-title {
-  font-family: "MiFuente",bold;
+  font-family: "Playfair Display",bold;
   font-size: var(--subtext-font-size);
   color: var(--gold-primary);
   margin-top: 1rem;
@@ -571,7 +572,7 @@ body {
 }
 
 .location-p {
-  font-family: "MiFuente",bold;
+  font-family: "Playfair Display",bold;
   font-size: var(--subtext-font-size);
   color: var(--gold-primary)
 }
@@ -607,7 +608,7 @@ body {
 
 .gift-text {
   
-  font-family: "MiFuente",bold;
+  font-family: "Playfair Display",bold;
   font-size: var(--text-font-size);
   color: var(--gold-primary);
   line-height: 1.6;
@@ -625,7 +626,7 @@ body {
 }
 
 .gift-sobre {
-  font-family: "MiFuente",bold;
+  font-family: "Playfair Display",bold;
   font-size: 2.5rem;
   font-weight: 600;
   color: var(--gold-primary);
@@ -673,7 +674,7 @@ body {
   background-position: center top;
   text-align: center;
 
-  font-family: "MiFuente",bold;
+  font-family: "Playfair Display",bold;
   font-size: 1.5rem;
   color: var(--gold-primary);
 
@@ -691,7 +692,7 @@ body {
 }
 .special-moments-text {
 
-  font-family: "MiFuente",bold;
+  font-family: "Playfair Display",bold;
   font-size: var(--text-font-size);
   color: var(--gold-primary);
   text-align: center;
@@ -717,7 +718,7 @@ body {
 }
 
 .album-button span {
-  font-family: "MiFuente",bold;
+  font-family: "Playfair Display",bold;
   font-size: var(--subtext-font-size);
   font-weight: 600;
   color: var(--gold-light);
@@ -745,7 +746,7 @@ h2 {
 
 h3 {
   color: var(--gold-soft);
-  font-family: "mifuente", bold;
+  font-family: "Playfair Display", bold;
   font-size: var(--subtext-font-size);
   margin-bottom: 2rem;
   
@@ -850,7 +851,7 @@ h3 {
 }
 
 .message-name {
-  font-family: "MiFuente", bold;
+  font-family: "Playfair Display", bold;
   font-weight: 600;
   font-size: var(--subtext-font-size);
   color: var(--gold-primary);
@@ -888,7 +889,7 @@ h3 {
 .form-group {
   margin-bottom: 1.4rem;
   text-align: center;
-  font-family: "MiFuente", bold;
+  font-family: "Playfair Display", bold;
   
 }
 
@@ -915,7 +916,7 @@ h3 {
   min-height: 80px;
 }
 .info-text {
-  font-family: "MiFuente", bold;
+  font-family: "Playfair Display", bold;
   font-size: var(--subtext-font-size);
   color: var(--gold-primary);
   margin-bottom: 1.5rem;
@@ -1045,7 +1046,7 @@ h3 {
 
 .xv{
   color: #b98f22;
-  font-family: 'MiFuente',bold;
+  font-family: 'Playfair Display',bold;
   font-size: 6rem;
 }
 
@@ -1060,7 +1061,7 @@ h3 {
 
 .countdown {
   color: var(--gold-primary);
-  font-family: "miFuente", bold;
+  font-family: "Playfair Display", bold;
   font-size: 1.25rem;
 }
 
@@ -1168,14 +1169,6 @@ canvas {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
-/* Mobile */
-@media (max-width: 520px) {
-  .app {
-    width: 95vw;
-    aspect-ratio: 500 / 636;
-    border-radius: 14px;
-  }
-}
 
 .app {
   min-width: 500px;

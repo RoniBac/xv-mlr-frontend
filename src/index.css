@@ -65,7 +65,7 @@ body {
 
 /* HERO */
 .hero {
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -1066,7 +1066,7 @@ h3 {
 }
 
 .hero {
-  height: 80vh;              /* ⬅️ ocupa toda la pantalla */
+  height: 100vh;              /* ⬅️ ocupa toda la pantalla */
   width: 100%;
   background-image: url('/hero.jpg'); /* tu imagen */
   background-size: cover;     /* ⬅️ se adapta a cualquier pantalla */

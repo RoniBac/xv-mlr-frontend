@@ -65,7 +65,7 @@ body {
 
 /* HERO */
 .hero {
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
 }
 
@@ -1171,21 +1171,14 @@ canvas {
 
 
 
-
-body {
-  margin: 0;
-  display: grid;
-  place-items: center;
-}
-
-
 #root{
   min-width: 500px;
   min-height: 100%;
 
   width: 100%;
-  
-  height: auto;
+
   aspect-ratio: 500 / 636;
+  height: 100vh;
+  display: grid;
 
 }

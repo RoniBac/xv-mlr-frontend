@@ -12,6 +12,7 @@ import InvitacionEvento from '../components/InvitacionEvento'
 import InvitacionPrevista from '../components/InvitacionPrevista'
 import Conmemorativos from '../components/conmemorativos'
 import FooterContact from '../components/FooterContact'
+import InvitationDownload from '../components/InvitationDownload'
 
 
 function Invitation() {
@@ -19,7 +20,6 @@ function Invitation() {
     
     <div className="body-invitation">
       <Header />
-      <PhotoCarousel />
       <InvitacionEvento />
       <InvitacionPrevista />
       <Countdown />
@@ -28,8 +28,7 @@ function Invitation() {
       <GiftSuggestion />
       <SpotifyPlayer />
       <SpecialMoments />
-      <GuestMessages />
-      <RSVP />
+      <InvitationDownload />
       <FooterContact />
     </div>
   )

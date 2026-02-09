@@ -1066,10 +1066,11 @@ h3 {
 }
 
 .hero {
+  border-bottom: 3px solid var(--gold-light);
   height: 100vh;              /* ⬅️ ocupa toda la pantalla */
   width: 100%;
   background-image: url('/hero.jpg'); /* tu imagen */
-  background-size: cover;     /* ⬅️ se adapta a cualquier pantalla */
+  background-size:contain;     /* ⬅️ se adapta a cualquier pantalla */
   background-position: center;
   background-repeat: no-repeat;
 
@@ -1077,7 +1078,7 @@ h3 {
   align-items: center;
   justify-content: center;
 
-  position: relative;
+  position: center;
 }
 .button-play {
   position: fixed;
@@ -1181,4 +1182,122 @@ canvas {
   height: 100vh;
   display: grid;
 
+}
+
+.album-button {
+  display: flex;
+  flex-direction: column;      /* imagen arriba, texto abajo */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 16px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* ESTILO DESHABILITADO */
+.album-disabled {
+  background: #0f0f0f;         /* negro suave */
+  opacity: 0.6;                /* se vea poquito */
+  cursor: default;
+}
+
+.album-disabled img {
+  width: 48px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
+
+.album-disabled span {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.album-button {
+  width: 220px;
+  height: 220px;              /* 🔥 CUADRADO */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: 18px;
+  text-align: center;
+}
+
+/* ESTADO DESHABILITADO */
+.album-disabled {
+  background: #0b0b0b;        /* negro suave */
+  opacity: 0.65;              /* visible pero apagado */
+}
+
+.album-disabled img {
+  width: 60px;
+  filter: grayscale(100%);
+  opacity: 0.85;
+}
+
+.album-title {
+  color: #e0e0e0;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.album-subtitle {
+  color: #9a9a9a;
+  font-size: 13px;
+}
+
+/* centra el cuadrado */
+.album-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.album-button {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border-radius: 18px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* negro apagado */
+.album-disabled {
+  background: #0b0b0b;
+  opacity: 0.65;
+  cursor: pointer;            /* 👈 clickeable */
+}
+
+/* efecto hover (muy sutil) */
+.album-disabled:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08);
+}
+
+.album-disabled img {
+  width: 60px;
+  filter: grayscale(100%);
+  opacity: 0.85;
+}
+
+.album-title {
+  color: #e0e0e0;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.album-subtitle {
+  color: #9a9a9a;
+  font-size: 13px;
 }
